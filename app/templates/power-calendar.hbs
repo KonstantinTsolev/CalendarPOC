@@ -1,0 +1,9 @@
+{{outlet}}
+{{#power-calendar-multiple
+  center=center
+  selected=model
+  onSelect=(action (mut model) value="moment") as |calendar|}}
+  {{calendar.nav}}
+  {{calendar.days}}
+{{/power-calendar-multiple}}
+{{model}}

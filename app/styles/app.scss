@@ -1,0 +1,110 @@
+@mixin borders ($pxs, $type ,$color){
+  border: $pxs $type $color;
+}
+
+@mixin alignment ($horizontal,$vertical){
+text-align: $horizontal;
+vertical-align: $vertical;
+}
+@mixin volume($width, $height){
+
+  @if type_of($width) == number{
+    width: $width;
+  }
+
+  @if type_of($height) == number{
+    height: $height;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color:black;
+  font-family: sans-serif,serif;
+}
+
+.ember-power-calendar{
+  display: block;
+  background-color: #f2f2f2;
+  @include volume(60%,40%);
+//  @include borders(2px, groove, #120142);
+
+  &-nav {
+      @include volume(100%,7%);
+  //    @include borders(2px, groove, #028262);
+
+    &-control{
+      background-color: #f2f2f2;
+      color: #4877ad;
+      @include volume(22%,80%);
+    //  @include borders(2px, dashed, #8ba303);
+      float:left;
+    }
+
+    &-title{
+      @include volume(55%,80%);
+      float:left;
+      @include alignment(center,middle);
+    //  @include borders(2px, ridge, #a30333);
+    }
+  }
+
+  &-days{
+    @include volume(100%,50%);
+  //  @include borders(2px, dashed, #0395a3);
+  }
+
+  &-weekdays{
+    @include volume(100%,20%);
+  //  @include borders(2px, dashed, #0395a3);
+  }
+
+  &-weekday{
+    display: block;
+    float:left;
+    margin: 2px;
+    @include volume(13%,100%);
+    @include alignment(center,middle);
+    //@include borders(2px, ridge, #a30333);
+  }
+
+  &-day-grid{
+    @include volume(100%,100%);
+    //@include borders(2px, groove, #7d0082);
+  }
+
+  &-row{
+    @include volume(100%,20%);
+  //  @include borders(2px, ridge, #a30333);
+  }
+
+  &-day{
+    @include volume(8%,10%);
+    display:inline-block;
+    font-size: 16px;
+    margin: 5px 10px;
+    align-content:stretch;
+    @include alignment(center,middle);
+    @include borders(1px, solid, #fff);
+    border-radius: 40%;
+
+    &--other-month{
+      color: #a3a1a3;
+    }
+
+    &--today{
+      color: #5b99cc;
+    }
+
+    &--selected{
+      color: #fff;
+      background-color: #4b4d4f;
+      @include borders(1px, solid, #fff);
+      border-radius: 40%;
+    }
+
+  }
+
+}
