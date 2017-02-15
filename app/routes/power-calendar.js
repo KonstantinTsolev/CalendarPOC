@@ -11,6 +11,8 @@ export default Ember.Route.extend({
       'Fri Feb 17 2017 00:00:00 GMT+0200',
       'Sat Feb 18 2017 00:00:00 GMT+0200',
       'Mon Feb 20 2017 00:00:00 GMT+0200',
-      'Tue Feb 21 2017 00:00:00 GMT+0200'    ]
+      'Tue Feb 21 2017 00:00:00 GMT+0200',
+      'Tue Feb 22 2017 00:00:00 GMT+0200',
+      'Tue Feb 25 2017 00:00:00 GMT+0200']    ]
   }
 });
